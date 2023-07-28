@@ -44,10 +44,11 @@ export class ProductregisterComponent implements OnInit {
       .subscribe({
         next: (detail: any) => {
           console.log(detail);
-          this.router.navigate(['home']);
+          alert(detail.message)
+          // this.router.navigate(['home']);
         },
         error: (error: any) => {
-          alert("user already exist");
+          alert(error.error.message);
           this.loading = false;
         }
       });
