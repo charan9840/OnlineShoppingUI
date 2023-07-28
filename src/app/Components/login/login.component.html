@@ -1,0 +1,74 @@
+<section class="h-100">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5 align-items-center mt-5">
+        <div class="card mt-6">
+          <div class="card-body">
+            <div class="card-header">
+              <p class="mx-5">
+                <img
+                  src="https://th.bing.com/th/id/OIP.4bU7Kak46l0e2YpNPJXP2gHaCp?w=324&h=125&c=7&r=0&o=5&pid=1.7"
+                />
+              </p>
+              <h6 data-text="Welcome To TechKart"></h6>
+            </div>
+            <h3 class="text-center">LOGIN</h3>
+            <div class="card-body">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="loginId">LoginId</label>
+                  <input
+                    type="text"
+                    formControlName="loginId"
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.loginId.errors }"
+                  />
+                  <div
+                    *ngIf="submitted && f.loginId.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.loginId.errors.required">
+                      LoginId is required
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    formControlName="password"
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                  />
+                  <div
+                    *ngIf="submitted && f.password.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.password.errors.required">
+                      Password is required
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="form-group1">
+                  <button [disabled]="loading" class="btn btn-primary">
+                    <span
+                      *ngIf="loading"
+                      class="spinner-border spinner-border-sm mr-1"
+                    ></span>
+                    Login
+                  </button>
+                  <a routerLink="../Registeration" class="btn btn-link"
+                    >Register</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+          <h2>WELCOME TO TECHKART...ENJOY YOUR SHOPPING..!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

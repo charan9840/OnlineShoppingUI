@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <button type="button" *ngIf="isAdmin()" [routerLink]="['/Productregister']"
+        class="btn btn-block">RegisterProduct</button>
+    </div>
+    <br>
+
+    <div class="col-12">
+      <div class="float-end">
+        <input type="search" name="search" placeholder="Search" [(ngModel)]="search" />
+      </div>
+    </div>
+
+    <div class="col-md-4" *ngFor="let detail of product | filter : search">
+
+      <div class="card justify-content-center " style="width: 20rem;">
+        <div class="card-body">
+
+          <img src = {{detail.imageURL}}>
+
+          <h5 class="card-title">{{detail.productName}}</h5>
+          <p class="card-text">{{detail.productDescription}}</p>
+          <p class="card-text">price-{{detail.price}}</p>
+          
+          <a href="#" class="btn btn-primary" [routerLink]="['/add-to-cart']">Add To Cart</a>
+          <br>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <br>
+            <button type="button" *ngIf="isAdmin()" [routerLink]="['/edit',detail.id.toString()]"
+              class="btn btn-Danger"><i class="fa-sharp fa-solid fa-pen"></i>Edit</button>
+            <br>
+            <button type="button" *ngIf="isAdmin()" (click)="ondelete(detail.id)" class="btn btn-Danger"><i
+                class="fa fa-trash"></i></button>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

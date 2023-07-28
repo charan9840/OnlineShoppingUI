@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-primary navbar-expand-md border-bottom shadow-sm">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <p><img src="https://th.bing.com/th/id/OIP.4bU7Kak46l0e2YpNPJXP2gHaCp?w=324&h=125&c=7&r=0&o=5&pid=1.7" alt=""
+          style="float:right;width: 160px;height:48px;"></p>&nbsp;
+    </div>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+      aria-label="Expand Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" [routerLink]="['/home']">
+            home </a> </li>
+        <li class="nav-item"><a class="nav-link active" (click)="Logout()" [routerLink]="['/']">
+            logout </a></li>
+      </ul>
+    </div>
+  </div> 
+</nav>

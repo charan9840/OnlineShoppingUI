@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  background-size: 400% 400%;
+  position: auto;
+}
+
+h6 {
+  color: rgb(240, 28, 28);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  text-align: center;
+}
+a {
+  color: #130b0b;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+p {
+  color: black;
+  font-size: 20px;
+}
+.card-header {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: center;
+}
+
+.card-body {
+  background-color: rgb(166, 240, 147);
+}
+
+.container {
+  border-radius: 15px;
+
+  margin: auto;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}

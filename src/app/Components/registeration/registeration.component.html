@@ -1,0 +1,175 @@
+<section>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 align-items-center mt-5">
+        <div class="card mt-6">
+          <div class="card-header">
+            <p class="mx-5">
+              <img
+                src="https://th.bing.com/th/id/OIP.4bU7Kak46l0e2YpNPJXP2gHaCp?w=324&h=125&c=7&r=0&o=5&pid=1.7"
+              />
+            </p>
+          </div>
+          <div class="card-body">
+            <h6>REGISTER</h6>
+
+            <br />
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  formControlName="firstName"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.firstName.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.firstName.errors.required">
+                    First Name is required
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  formControlName="lastName"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.lastName.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.lastName.errors.required">
+                    Last Name is required
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input
+                  type="string"
+                  formControlName="Email"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Email.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.Email.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.Email.errors.required">Email is required</div>
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="contactNumber">Contact Number</label>
+                <input
+                  type="number"
+                  formControlName="contactNumber"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && f.contactNumber.errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f.contactNumber.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.contactNumber.errors.required">
+                    Number is required
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="loginId">loginId</label>
+                <input
+                  type="text"
+                  formControlName="loginId"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.loginId.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.loginId.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.loginId.errors.required">
+                    LoginId is required
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.password.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.password.errors.required">
+                    Password is required
+                  </div>
+                  <div *ngIf="f.password.errors.minlength">
+                    Password must be at least 6 characters
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="Conformpassword">conform Password</label>
+                <input
+                  type="password"
+                  formControlName="Conformpassword"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && f.Conformpassword.errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f.Conformpassword.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.Conformpassword.errors.required">
+                    Conform Password is required
+                  </div>
+                  <div *ngIf="f.Conformpassword.errors.minlength">
+                    Password must be at least 6 characters
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                  <span
+                    *ngIf="loading"
+                    class="spinner-border spinner-border-sm mr-1"
+                  ></span>
+                  Register
+                </button>
+                <a routerLink="../login" class="btn btn-link">Cancel</a>
+              </div>
+            </form>
+            <br />
+            <a routerLink="/">Go Back To Home</a>
+          </div>
+          <h2>WELCOME TO TECHKART...ENJOY YOUR SHOPPING..!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

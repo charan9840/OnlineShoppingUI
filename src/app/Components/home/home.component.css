@@ -1,0 +1,20 @@
+.card {
+    margin-top: 60px;
+    margin-left: 200px;
+    margin-bottom: 60px;
+    background-color:rgb(252, 251, 245);
+    display: inline-block;
+    position: relative;
+    margin: 5%;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+button {
+    color: rgb(0, 0, 0);
+}
+ img{
+    width: 290px;;
+ }
