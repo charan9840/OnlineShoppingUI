@@ -14,7 +14,7 @@ export class AuthService {
   baseURl = environment.API_URL;
 
   public Login(login: Login): Observable<string> {
-    var temp = this.http.post(`${this.baseURl}/api/Auth/Login/user`, login, {
+    var temp = this.http.post(`${this.baseURl}/api/Auth/Login`, login, {
       responseType: 'text',
     });
     console.log(temp);
